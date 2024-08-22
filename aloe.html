@@ -45,7 +45,10 @@
       let arObject = new Node();
       arObject.visible = false;
       scene.addNode(arObject);
-
+      
+      let title = new Gltf2Node({url: 'media/gltf/text/text.gltf'});
+      arObject.addNode(title);
+      
       let flower = new Gltf2Node({url: 'media/gltf/plants/aloe.gltf'});
       arObject.addNode(flower);
 
@@ -147,7 +150,7 @@
         title.matrix = matrix;
         
         scene.addNode(newFlower);
-        
+        scene.addNode(title);
         flowers.push(newFlower);
 
         // For performance reasons if we add too many objects start
