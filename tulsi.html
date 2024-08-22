@@ -50,6 +50,7 @@
       arObject.addNode(title);
 
       let flower = new Gltf2Node({url: 'media/gltf/plants/tulsi.gltf'});
+      vec3.set(flower.scale, 0.5, 0.5, 0.5);
       arObject.addNode(flower);
 
       let reticle = new Gltf2Node({url: 'media/gltf/reticle/reticle1.gltf'});
